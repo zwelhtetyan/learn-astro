@@ -4,8 +4,6 @@ import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "Blogs";
 
 const allPosts = await Astro.glob("./posts/*.md");
-
-console.log(allPosts);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
