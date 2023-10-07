@@ -4,6 +4,6 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://learn-astro-pink.vercel.app",
+  site: "https://z-learn-astro.vercel.app",
   integrations: [preact()]
 });
