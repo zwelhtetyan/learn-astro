@@ -7,6 +7,9 @@ import BaseLayout from "./BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+  <p class="go_back" onclick="
+  history.back()
+  ">&larr; go back</p>
   <p>{frontmatter.pubDate.slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
@@ -15,3 +18,14 @@ import BaseLayout from "./BaseLayout.astro";
 
   <slot />
 </BaseLayout>
+
+<style>
+  .go_back {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #64ccc5;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+</style>
