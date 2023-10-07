@@ -1,0 +1,32 @@
+---
+export interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="tags_container">
+  {
+    tags.map((tag) => (
+      <p>
+        <a href={`/tags/${tag}`}>{tag}</a>
+      </p>
+    ))
+  }
+</div>
+
+<style>
+  .tags_container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .tags_container a {
+    text-decoration: underline;
+  }
+
+  .tags_container a:hover {
+    text-decoration-style: wavy;
+  }
+</style>

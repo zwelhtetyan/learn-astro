@@ -1,0 +1,17 @@
+---
+export interface Props {
+  platform: string;
+  username: string;
+}
+
+const { platform, username } = Astro.props;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+<style>
+  a {
+    color: #64ccc5;
+    text-decoration: none;
+  }
+</style>
