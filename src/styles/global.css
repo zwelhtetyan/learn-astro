@@ -2,10 +2,8 @@
   box-sizing: border-box;
 }
 
-
 html {
   background-color: #F1EFEF;
-  /* color: white; */
   font-family: sans-serif;
 }
 
@@ -13,7 +11,6 @@ html.dark {
   background-color: #363535;
   color: #fff;
 }
-
 
 body {
   margin: 0 auto;
@@ -51,16 +48,13 @@ ul {
   list-style: none;
 }
 
-
 li {
   margin: .5rem 0;
 }
 
-/* nav styles */
 
 header {
   margin-bottom: 2rem;
-  /* border-bottom: 1px solid #818181; */
 }
 
 .nav-links {
@@ -82,10 +76,6 @@ header {
   letter-spacing: .1rem;
 }
 
-/* .nav-links a:first-child {
-  margin-right: auto;
-} */
-
 .nav-links ._left {
   display: flex;
   flex-direction: column-reverse;
@@ -94,11 +84,9 @@ header {
   margin-right: auto;
 }
 
-
 .expanded {
   display: unset;
 }
-
 
 @media screen and (min-width: 636px) {
   .nav-links {
@@ -124,7 +112,6 @@ header {
 
 }
 
-/* nav styles */
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
