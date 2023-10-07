@@ -1,13 +1,17 @@
-
 * {
   box-sizing: border-box;
 }
 
 
 html {
-  background-color: #363535;
-  color: white;
+  background-color: #F1EFEF;
+  /* color: white; */
   font-family: sans-serif;
+}
+
+html.dark {
+  background-color: #363535;
+  color: #fff;
 }
 
 
@@ -56,7 +60,7 @@ li {
 
 header {
   margin-bottom: 2rem;
-  border-bottom: 1px solid #818181;
+  /* border-bottom: 1px solid #818181; */
 }
 
 .nav-links {
@@ -64,8 +68,8 @@ header {
   top: 5rem;
   left: 48px;
   margin: 0;
-  display: flex !important;
-  gap: 1.5rem !important;
+  display: none;
+  border-bottom: 1px solid #818181;
 }
 
 .nav-links a {
@@ -78,13 +82,23 @@ header {
   letter-spacing: .1rem;
 }
 
-.nav-links a:first-child {
+/* .nav-links a:first-child {
+  margin-right: auto;
+} */
+
+.nav-links ._left {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
   margin-right: auto;
 }
+
 
 .expanded {
   display: unset;
 }
+
 
 @media screen and (min-width: 636px) {
   .nav-links {
@@ -92,6 +106,8 @@ header {
     position: static;
     width: auto;
     background: none;
+    display: flex !important;
+    gap: 1.5rem !important;
   }
 
   .nav-links a {
@@ -101,6 +117,11 @@ header {
   .hamburger {
     display: none;
   }
+
+  .nav-links ._left {
+    flex-direction: row;
+  }
+
 }
 
 /* nav styles */
@@ -111,8 +132,8 @@ header {
 
 .hamburger .line {
   display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 6px;
   background-color: #64CCC5;
 }
